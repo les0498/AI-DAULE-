@@ -1,0 +1,4 @@
+Emotion: sad
+Emotion: angry
+Emotion: sad
+Emotion: neutral

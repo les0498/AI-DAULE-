@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="utf-8">
+	<title>Survey Form</title>
+
+  {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/question.css' %}">
+    <script type="text/javascript" src="{% static 'main/js/question.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/index.css' %}">
+
+
+
+</head>
+<body>
+
+    <div class="container right-panel-active">
+        <div class="slide">
+        <form method="post" action="{% url 'survey_form_submit' %}">
+            {% csrf_token %}
+        <div class="form" >
+        <h2 class="formtitle">성향 테스트</h2>
+        <h3 class="formtitle">Q2. 당신의 연령대를 선택해 주세요.</h3>
+            <div class="row">
+                    <label class="label"><input type="radio" name="q2" value="10">10대</label>
+                    <label class="label"><input type="radio" name="q2" value="20">20대</label>
+                    <label class="label"><input type="radio" name="q2" value="30">30대</label>
+                    <label class="label"><input type="radio" name="q2" value="40">40대</label>
+                    <label class="label"><input type="radio" name="q2" value="50">50대</label>
+                </div>
+
+                <div class="row">
+                    <label class="label"><input type="radio" name="q2" value="60">60대</label>
+                    <label class="label"><input type="radio" name="q2" value="70">70대</label>
+                    <label class="label"><input type="radio" name="q2" value="80">80대</label>
+                    <label class="label"><input type="radio" name="q2" value="90">90대</label>
+                    <label class="label"><input type="radio" name="q2" value="100">100대</label>
+                </div>
+
+        <a href="/question1" class="btn" >이전</button></a>
+        <a href="/question3" class="btn" >다음</button></a>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+</html>

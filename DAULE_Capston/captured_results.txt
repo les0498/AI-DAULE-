@@ -1,0 +1,10 @@
+Emotion: sad
+Satisfaction: bad
+Emotion: happy
+Satisfaction: good
+Emotion: happy
+Satisfaction: good
+Emotion: happy
+Satisfaction: good
+Emotion: happy
+Satisfaction: good

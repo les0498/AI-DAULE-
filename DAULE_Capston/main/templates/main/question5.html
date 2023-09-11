@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="utf-8">
+	<title>Survey Form</title>
+
+  {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/question.css' %}">
+    <script type="text/javascript" src="{% static 'main/js/question.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/index.css' %}">
+
+
+
+</head>
+<body>
+
+    <div class="container right-panel-active">
+        <div class="slide">
+          <form method="post" action="{% url 'survey_form_submit' %}">
+            {% csrf_token %}
+            <div class="form" >
+                <h2 class="formtitle">성향 테스트</h2>
+                <h3 class="formtitle">Q6. 당신의 성격은 어떻습니까?</h3>
+                    <div class="choices">
+                        <div class="row">
+                          <label class="label"><input type="radio" name="q5" value="E">E</label>
+                          <label class="label"><input type="radio" name="q5" value="I">I</label>
+                        </div>
+                        <div class="row">
+                          <label class="label"><input type="radio" name="q5" value="N">N</label>
+                          <label class="label"><input type="radio" name="q5" value="S">S</label>
+                        </div>
+                        <div class="row">
+                          <label class="label"><input type="radio" name="q5" value="T">T</label>
+                          <label class="label"><input type="radio" name="q5" value="F">F</label>
+                        </div>
+                        <div class="row">
+                          <label class="label"><input type="radio" name="q5" value="P">P</label>
+                          <label class="label"><input type="radio" name="q5" value="J">J</label>
+                        </div>
+                    </div>
+
+                <a href="/question4" class="btn" >이전</button></a>
+                <a href="/question6" class="btn" >다음</button></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
